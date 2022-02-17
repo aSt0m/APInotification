@@ -1,0 +1,9 @@
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+body{
+    color: rgb(219, 191, 191);
+    background: #000;
+}
