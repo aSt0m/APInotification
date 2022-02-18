@@ -7,6 +7,8 @@ body{
     color: rgb(219, 191, 191);
     background: #000;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     
 }
@@ -30,11 +32,13 @@ img{
 .card{
     height: 100%;
     width: 100%;
+    border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #838;
     perspective: 5000px;
+    cursor: pointer;
     position: absolute;
     transition: 1s ease-in;
     backface-visibility: hidden;
@@ -44,16 +48,31 @@ img{
     
 }
 .container-cards:hover .card-front{
+    
     transform: rotateY( 180deg )  ;
     
 }
 .card-back{
     background:#aa5353;    
-    transform: rotateY( 180deg )
-    
+    transform: rotateY( 180deg );
+  
     
 } 
-
+.container-pdf{
+    height: 100px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pdf{
+    margin: 4px;
+    
+}
+.link{
+    text-decoration: none;
+    font-size: 1.5rem;
+}
 .container-cards:hover .card-back{
     transform: rotateY( 0deg )
 }
