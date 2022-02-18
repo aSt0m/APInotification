@@ -6,4 +6,58 @@
 body{
     color: rgb(219, 191, 191);
     background: #000;
+    display: flex;
+    justify-content: center;
+    
+}
+img{
+    min-width: 100%;
+}
+
+.container-cards{
+    height: 20rem;
+    width: 15rem;
+    margin: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+
+}
+
+.card{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #838;
+    perspective: 5000px;
+    position: absolute;
+    transition: 1s ease-in;
+    backface-visibility: hidden;
+}
+.card-front{
+   background: #838
+    
+}
+.container-cards:hover .card-front{
+    transform: rotateY( 180deg )  ;
+    
+}
+.card-back{
+    background:#aa5353;    
+    transform: rotateY( 180deg )
+    
+    
+} 
+
+.container-cards:hover .card-back{
+    transform: rotateY( 0deg )
+}
+.img{
+   padding: 3rem;
+
 }

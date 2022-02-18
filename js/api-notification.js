@@ -22,29 +22,29 @@
 //         document.querySelector('#aviso').innerHTML = "Se ha cerrado la notificacion";
 //     },false);
 // }
+let button = document.querySelector('button');
+let div = document.querySelector('.div');
 
-let button = document.querySelector( '#activar-notificacion');
 
-button.addEventListener('click',()=>{
-
+button.addEventListener('click', () => {
     if(!window.Notification) return;
-
+   
     Notification
     .requestPermission()
-    .then( permission => console.log(permission))
-
-
-
-})
-
+    .then(showNotification)
+});
 function showNotification(permission){
-    if( permission !== 'granted' ) return;
-    
-        let notification = new Notification('My title', {
-            body: "Hi, how are you",
-            icon:'icon.png'
-        })
-        notification.onclick = ()=>{
-            window.open('https://google.com');   
-        }
+    if(permission !== 'granted') return;
+    let notification = new Notification('My Title', {
+        body:"Hola, es mi primera notificacion",
+        icon:'img/moonCrater.jpg'        
+    })
+    notification.onclick = () => {
+        window.open('https://google.com');
+        div.styl
+
+        // window.location.href= "https://www.google.com"
+    }
 }
+
+
