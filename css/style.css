@@ -1,20 +1,45 @@
+/* * { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); } */
+
+
 *,
 *:before,
 *:after{
     box-sizing: border-box;
 }
+
 body{
     color: rgb(219, 191, 191);
-    background: #000;
+    background: rgb(211, 198, 198);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     
 }
+
 img{
     min-width: 100%;
 }
+
+.button{
+    color: #fff;
+    width: 10rem;
+    background: rgba(46, 77, 212, 0.867);
+    border-radius: 3rem;
+    border: none;
+    box-shadow: 3px 3px 3px 1px rgba(9,2,6,.3);
+    cursor: pointer;
+
+}
+
 
 .container-cards{
     height: 20rem;
@@ -26,7 +51,8 @@ img{
     position: relative;
     transform-style: preserve-3d;
     backface-visibility: hidden;
-
+    cursor: pointer;
+    
 }
 
 .card{
@@ -38,10 +64,12 @@ img{
     align-items: center;
     background: #838;
     perspective: 5000px;
-    cursor: pointer;
     position: absolute;
     transition: 1s ease-in;
     backface-visibility: hidden;
+    box-shadow: 3px 10px 5px -3px rgba(0,0,0,0.27);
+;
+   
 }
 .card-front{
    background: #838
@@ -58,6 +86,7 @@ img{
   
     
 } 
+.munky,
 .container-pdf{
     height: 100px;
     width: 60px;
@@ -79,4 +108,64 @@ img{
 .img{
    padding: 3rem;
 
+}
+
+
+/* card-horizon */
+
+
+.container-cards-h{
+    height: 15rem;
+    width: 20rem;
+    transform-style: preserve-3d;
+    position: relative;
+    margin: 3rem;
+       
+    
+}
+.container-cards-h:before{
+    content: '';
+    height: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    box-shadow: 5px 0px 34px rgb(0, 0, 0);
+
+}
+.card-h{
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    perspective: 5000px;
+    border-radius: 2rem;
+    background: rgb(255, 255, 255);
+    transition: 1s linear;
+    
+}
+.card-front-h{
+    transform: rotateX( 0deg );
+    background: #550f2c;
+}
+.card-back-h{
+    transform: rotateX( 180deg );
+    background:#000000;
+ 
+    
+}
+.munky{
+    height: 14rem;
+}
+.img-h{
+    height: 100%;
+    width: 100%;   
+}
+.container-cards-h:hover .card-front-h{
+    transform: rotateX( 180deg );
+}
+.container-cards-h:hover .card-back-h{
+     
+    transform: rotateX( 0deg );
 }

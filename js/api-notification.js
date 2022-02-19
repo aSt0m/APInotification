@@ -46,5 +46,3 @@ function showNotification(permission){
         // window.location.href= "https://www.google.com"
     }
 }
-
-
